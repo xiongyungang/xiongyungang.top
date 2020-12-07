@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.xiongyungang.mapper.ContentMapper">
+
+    <select id="selectPageVo" resultType="top.xiongyungang.entity.Content">
+        SELECT id,author,content,title,category_id,user_id,create_time,update_time,version,deleted FROM content
+        WHERE deleted = 0
+    </select>
+</mapper>
